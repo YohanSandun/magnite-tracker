@@ -17,13 +17,16 @@ const COLLECTION = 'orders';
 // --------------- Helpers ---------------
 const toTimestamp = (dateStr) => {
   if (!dateStr) return null;
-  return Timestamp.fromDate(new Date(dateStr + 'T00:00:00'));
+  return Timestamp.fromDate(new Date(dateStr + 'T00:00:00Z'));
 };
 
 const fromTimestamp = (ts) => {
   if (!ts) return null;
   const d = ts.toDate();
-  return d.toISOString().split('T')[0];
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 };
 
 const sanitizeOrder = (data) => ({
