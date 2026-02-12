@@ -64,7 +64,7 @@ export default {
     heroTitle2: 'Order Tracker',
     heroDescription:
       'Track your AMW order journey, predict delivery timelines, and help the Sri Lankan Magnite community by sharing your order milestones.',
-    reportYourOrder: 'Report Your Order',
+    reportYourOrder: 'Add Your Order',
     trackYourOrder: 'Track Your Order',
     communityOverview: 'Community Overview',
     totalOrders: 'Total Orders',
@@ -87,7 +87,7 @@ export default {
 
   // Report page
   report: {
-    title: 'Report Your Order',
+    title: 'Add Your Order',
     description:
       'Share your Nissan Magnite order details to help the community track delivery timelines. You can update milestones later using your order number.',
     howItWorks: 'How it works:',
@@ -114,7 +114,7 @@ export default {
     vehicleRegPlaceholder: 'e.g., CAA-1234',
     vehicleRegHelper: 'Optional: your vehicle number plate',
     submitting: 'Submitting...',
-    submitOrderReport: 'Submit Order Report',
+    submitOrderReport: 'Submit',
     successMessage: 'Order reported successfully! Redirecting to tracking page...',
     // Validation
     valOrderRequired: 'Order number is required',
