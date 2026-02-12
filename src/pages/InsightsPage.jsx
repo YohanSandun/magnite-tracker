@@ -165,7 +165,7 @@ export default function InsightsPage() {
             <Typography variant="h6" gutterBottom>
               {t('insights.avgDaysBetweenMilestones')}
             </Typography>
-            <Grid container spacing={2}>
+            <Grid container spacing={{ xs: 1, sm: 2 }}>
               {[
                 { label: t('insights.orderToArrivedSL'), value: stats.orderToSms, color: '#1B3A5C' },
                 { label: t('insights.arrivedToPayment'), value: stats.smsToPayment, color: '#0288D1' },
@@ -175,11 +175,11 @@ export default function InsightsPage() {
                 .filter((m) => m.value !== null)
                 .map((m) => (
                   <Grid item xs={6} sm={3} key={m.label}>
-                    <Box sx={{ textAlign: 'center', py: 1 }}>
-                      <Typography variant="h4" fontWeight={800} sx={{ color: m.color }}>
+                    <Box sx={{ textAlign: 'center', py: { xs: 0.5, sm: 1 } }}>
+                      <Typography sx={{ fontSize: { xs: '1.5rem', sm: '2.125rem' } }} fontWeight={800} color={m.color}>
                         {m.value}
                       </Typography>
-                      <Typography variant="caption" color="text.secondary">
+                      <Typography variant="caption" color="text.secondary" sx={{ fontSize: { xs: '0.6rem', sm: '0.75rem' }, lineHeight: 1.2, display: 'block' }}>
                         {m.label}
                       </Typography>
                     </Box>

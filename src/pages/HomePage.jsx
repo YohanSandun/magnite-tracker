@@ -188,42 +188,42 @@ export default function HomePage() {
                 {t('home.avgMilestoneDurations')}
               </Typography>
               <Card sx={{ mb: 4 }}>
-                <CardContent>
-                  <Grid container spacing={2}>
+                <CardContent sx={{ px: { xs: 1.5, sm: 3 } }}>
+                  <Grid container spacing={{ xs: 1, sm: 2 }}>
                     {stats.orderToSms && (
-                      <Grid item xs={12} sm={4}>
-                        <Box sx={{ textAlign: 'center', py: 1 }}>
-                          <Typography variant="h4" fontWeight={800} color="primary.main">
+                      <Grid item xs={4} sm={4}>
+                        <Box sx={{ textAlign: 'center', py: { xs: 0.5, sm: 1 } }}>
+                          <Typography sx={{ fontSize: { xs: '1.5rem', sm: '2.125rem' } }} fontWeight={800} color="primary.main">
                             {stats.orderToSms}
                           </Typography>
-                          <Typography variant="body2" color="text.secondary">
+                          <Typography sx={{ fontSize: { xs: '0.65rem', sm: '0.875rem' } }} color="text.secondary">
                             {t('home.daysOrderToArrival')}
                           </Typography>
-                          <Typography variant="caption" color="text.secondary">
+                          <Typography variant="caption" color="text.secondary" sx={{ fontSize: { xs: '0.6rem', sm: '0.75rem' } }}>
                             ({stats.sampleSizeOrderToSms} reports)
                           </Typography>
                         </Box>
                       </Grid>
                     )}
                     {stats.smsToPayment && (
-                      <Grid item xs={12} sm={4}>
-                        <Box sx={{ textAlign: 'center', py: 1 }}>
-                          <Typography variant="h4" fontWeight={800} color="info.main">
+                      <Grid item xs={4} sm={4}>
+                        <Box sx={{ textAlign: 'center', py: { xs: 0.5, sm: 1 } }}>
+                          <Typography sx={{ fontSize: { xs: '1.5rem', sm: '2.125rem' } }} fontWeight={800} color="info.main">
                             {stats.smsToPayment}
                           </Typography>
-                          <Typography variant="body2" color="text.secondary">
+                          <Typography sx={{ fontSize: { xs: '0.65rem', sm: '0.875rem' } }} color="text.secondary">
                             {t('home.daysArrivalToPayment')}
                           </Typography>
                         </Box>
                       </Grid>
                     )}
                     {stats.paymentToReceived && (
-                      <Grid item xs={12} sm={4}>
-                        <Box sx={{ textAlign: 'center', py: 1 }}>
-                          <Typography variant="h4" fontWeight={800} color="success.main">
+                      <Grid item xs={4} sm={4}>
+                        <Box sx={{ textAlign: 'center', py: { xs: 0.5, sm: 1 } }}>
+                          <Typography sx={{ fontSize: { xs: '1.5rem', sm: '2.125rem' } }} fontWeight={800} color="success.main">
                             {stats.paymentToReceived}
                           </Typography>
-                          <Typography variant="body2" color="text.secondary">
+                          <Typography sx={{ fontSize: { xs: '0.65rem', sm: '0.875rem' } }} color="text.secondary">
                             {t('home.daysPaymentToReceived')}
                           </Typography>
                         </Box>
